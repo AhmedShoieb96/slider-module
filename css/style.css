@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.slider-container{
+    margin:10px auto;
+    width: 800px;
+    height: 250px;
+    position: relative;
+    background-color: aquamarine;
+    
+}
+.slider-container img{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+}
+.slider-container img.active{
+    opacity: 1;
+
+}
+.slider-container .slider-num{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0 , 0 , 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    z-index: 2;
+
+}
+
+.controls{
+    color: black;
+    width: 800px;
+    margin: 50px auto;
+    overflow: hidden;
+
+
+   
+    /* text-align: center; */
+
+}
+.controls .next,
+.controls .previous{
+    background-color: aquamarine;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    user-select: none;
+    text-align: center;
+    margin: auto;
+    width: 20%;
+    cursor: pointer;
+
+}
+.controls .previous{
+    float: left;
+}
+
+.controls .next{
+    float: right;
+    }
+
+.controls .next.disabled,
+.controls .previous.disabled {
+    background-color: rgba(127, 255, 212, 0.5);
+    cursor: no-drop;
+}
+
+.controls .indecators{
+    width: 60%;
+    float: left;
+}
+.controls .indecators ul{
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+.controls .indecators ul li{
+    display: inline-block;
+    background-color: rgb(212, 210, 210);
+    color: black;
+    font-weight: bold;
+    height:28px;
+    width: 28px;
+    border-radius: 4px;
+    line-height: 28px;
+    cursor: pointer;
+    margin: 0 2px;
+}
+.controls .indecators ul li.active{
+    background-color: aquamarine;
+}
